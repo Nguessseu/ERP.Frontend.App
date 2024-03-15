@@ -1,0 +1,177 @@
+﻿@page "/price"
+@using ERP.Backend.gRPCCodeFirst.Interfaces
+@using Google.Protobuf.WellKnownTypes
+@using ERP.Backend.Models
+@using Grpc.Net.Client
+@using ProtoBuf.Grpc.Client
+@using ERP.Frontend.App.Components 
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
+
+
+<h1>Price Management</h1>
+
+<button class="btn btn-primary" @onclick="ShowDialog">Get List of Articles</button>
+<button class="btn btn-primary_create " @onclick="CreatePrice">Create Price</button>
+
+<style>
+    .table tbody tr:hover {
+        cursor: pointer; 
+        background-color: lightgray; 
+    }
+</style>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Article ID</th>
+            <th>Article Name</th>
+            <th>Brand</th>
+            <!-- Add more table headers as needed -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in articles)
+        {
+            <tr @onclick="() => ShowArticleId(article.Id)">
+                <td>@article.Id</td>
+                <td>@article.Name</td>
+                <td>@article.Brand</td>
+                <!-- Add more table cells for additional article properties -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div id="myModal" class="modal" style="@(showModal ? "display: block;" : "display: none;")">
+    <div class="modal-content-Prices">
+        <span class="close" @onclick="CloseModal">&times;</span>
+        <p>Article ID: @selectedArticleId</p>
+        <p>List of Prices:</p>
+        <ul>
+             @foreach (var article in articles)
+            {
+                @foreach (var price in article.Prices)
+                {
+                    if (article.Id == selectedArticleId)
+                    {
+                        <ul>
+                            @price.Amount
+                        </ul>
+                    }
+                }
+            }
+        </ul>
+    </div>
+</div>
+
+@if (showCreatePriceModal)
+{
+    <div class="modal" tabindex="-1" role="dialog" style="display:block">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create New Price</h5>
+                    <button type="button" class="close" @onclick="CloseCreatePriceModal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form for creating new article -->
+                    <div class="form-group">
+                        <label for="name">Artice Id:</label>
+                        <input type="text" class="form-control" @bind="newPrice.ArticleId" />
+                    </div>
+                    <div class="form-group">
+                        <label for="brand">Valid Date:</label>
+                        <input type="text" class="form-control" @bind="newPrice.ValidFrom" />
+                    </div>
+                    <div class="form-group">
+                        <label for="brand">Price:</label>
+                        <input type="text" class="form-control" @bind="newPrice.Amount" />
+                    </div>
+
+                    <!-- Add more fields for additional article properties as needed -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-save" @onclick="SavePrice">Save</button>
+                    <button type="button" class="btn btn-quit" @onclick="CloseCreatePriceModal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    //private bool showCreateArticleModal = false;
+    private bool showCreatePriceModal = false;
+    private Price newPrice = new Price();
+    private Article newArticle = new Article();
+
+
+    private bool showPriceModal = false;
+    private List<Article> articles = new List<Article>();
+    private List<Price> prices = new List<Price>();
+
+    private bool showModal = false;
+    private int selectedArticleId;
+
+    private void ShowArticleId(int articleId)
+    {
+        selectedArticleId = articleId;
+        showModal = true;
+    }
+
+    private void CloseModal()
+    {
+        showModal = false;
+    }
+
+    private async Task ShowDialog()
+    {
+        await GetArticles(); 
+    }
+
+    private async Task GetArticles()
+    {
+        using (var channel = GrpcChannel.ForAddress("http://localhost:5198"))
+        {
+            var client = channel.CreateGrpcService<IArtikelDistributedService>();
+            var reply = await client.GetArticleList(new Empty());
+            articles = reply.ToList();
+        }
+    }
+
+    private async Task GetPricesById()
+    {
+            using (var channel = GrpcChannel.ForAddress("http://localhost:5198"))
+            {
+                var client = channel.CreateGrpcService<IPriceDistributedService>();
+                var reply = await client.GetPricesByArticleId(new Int32Value { Value = selectedArticleId });
+                prices = reply.ToList();
+                showPriceModal = true; 
+            
+        }
+        Console.WriteLine(prices);
+    }
+
+    private async Task CreatePrice()
+    {
+        showCreatePriceModal = true;
+    }
+
+    private void CloseCreatePriceModal()
+    {
+        showCreatePriceModal = false;
+    }
+
+    private async Task SavePrice()
+    {
+        using (var channel = GrpcChannel.ForAddress(("http://localhost:5198")))
+        {
+            var client = channel.CreateGrpcService<IPriceDistributedService>();
+            var reply = await client.CreatePrice(newPrice);
+            newPrice = new Price();
+            showCreatePriceModal = false;
+        }
+    }
+}

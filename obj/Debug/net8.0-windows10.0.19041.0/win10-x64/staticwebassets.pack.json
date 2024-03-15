@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Armand Njomo\\Downloads\\ERP.Frontend.App\\ERP.Frontend.App\\Components\\Pages\\ArticlePages.razor.js",
+      "PackagePath": "staticwebassets\\Components\\Pages\\ArticlePages.razor.js"
+    },
+    {
+      "Id": "C:\\Users\\Armand Njomo\\Downloads\\ERP.Frontend.App\\ERP.Frontend.App\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\ERP.Frontend.App.styles.css",
+      "PackagePath": "staticwebassets\\ERP.Frontend.App.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Armand Njomo\\Downloads\\ERP.Frontend.App\\ERP.Frontend.App\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Armand Njomo\\Downloads\\ERP.Frontend.App\\ERP.Frontend.App\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Armand Njomo\\Downloads\\ERP.Frontend.App\\ERP.Frontend.App\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Armand Njomo\\Downloads\\ERP.Frontend.App\\ERP.Frontend.App\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Armand Njomo\\Downloads\\ERP.Frontend.App\\ERP.Frontend.App\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.ERP.Frontend.App.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.build.ERP.Frontend.App.props",
+      "PackagePath": "build\\ERP.Frontend.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildMultiTargeting.ERP.Frontend.App.props",
+      "PackagePath": "buildMultiTargeting\\ERP.Frontend.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildTransitive.ERP.Frontend.App.props",
+      "PackagePath": "buildTransitive\\ERP.Frontend.App.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
