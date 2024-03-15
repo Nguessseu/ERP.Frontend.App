@@ -7,7 +7,6 @@
 @using ERP.Frontend.App.Components 
 @inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
 
-
 <h1>Price Management</h1>
 
 <button class="btn btn-primary" @onclick="ShowDialog">Get List of Articles</button>
@@ -26,7 +25,6 @@
             <th>Article ID</th>
             <th>Article Name</th>
             <th>Brand</th>
-            <!-- Add more table headers as needed -->
         </tr>
     </thead>
     <tbody>
@@ -36,7 +34,6 @@
                 <td>@article.Id</td>
                 <td>@article.Name</td>
                 <td>@article.Brand</td>
-                <!-- Add more table cells for additional article properties -->
             </tr>
         }
     </tbody>
@@ -76,7 +73,6 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <!-- Form for creating new article -->
                     <div class="form-group">
                         <label for="name">Artice Id:</label>
                         <input type="text" class="form-control" @bind="newPrice.ArticleId" />
@@ -89,8 +85,6 @@
                         <label for="brand">Price:</label>
                         <input type="text" class="form-control" @bind="newPrice.Amount" />
                     </div>
-
-                    <!-- Add more fields for additional article properties as needed -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-save" @onclick="SavePrice">Save</button>
@@ -102,16 +96,12 @@
 }
 
 @code {
-    //private bool showCreateArticleModal = false;
     private bool showCreatePriceModal = false;
     private Price newPrice = new Price();
     private Article newArticle = new Article();
-
-
     private bool showPriceModal = false;
     private List<Article> articles = new List<Article>();
     private List<Price> prices = new List<Price>();
-
     private bool showModal = false;
     private int selectedArticleId;
 
@@ -149,7 +139,6 @@
                 var reply = await client.GetPricesByArticleId(new Int32Value { Value = selectedArticleId });
                 prices = reply.ToList();
                 showPriceModal = true; 
-            
         }
         Console.WriteLine(prices);
     }

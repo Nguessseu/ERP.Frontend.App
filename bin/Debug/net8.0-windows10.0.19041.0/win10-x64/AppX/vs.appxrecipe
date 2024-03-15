@@ -30,25 +30,25 @@
     <AppXManifest Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-03-14T18:48:39.403</Modified>
+      <Modified>2024-03-15T09:20:56.025</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-03-14T14:41:28.706</Modified>
+      <Modified>2024-03-15T07:48:30.867</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ERP.Frontend.App.runtimeconfig.json">
       <PackagePath>ERP.Frontend.App.runtimeconfig.json</PackagePath>
-      <Modified>2024-02-29T13:34:07.504</Modified>
+      <Modified>2024-03-15T07:48:30.510</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ERP.Frontend.App.dll">
       <PackagePath>ERP.Frontend.App.dll</PackagePath>
-      <Modified>2024-03-14T18:48:37.703</Modified>
+      <Modified>2024-03-15T09:20:54.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ERP.Frontend.App.exe</PackagePath>
-      <Modified>2024-03-14T18:48:37.854</Modified>
+      <Modified>2024-03-15T09:20:54.741</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -60,7 +60,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\wwwroot\css\app.css">
       <PackagePath>wwwroot\css\app.css</PackagePath>
-      <Modified>2024-03-14T15:39:54.896</Modified>
+      <Modified>2024-03-15T09:20:39.241</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\wwwroot\css\bootstrap\bootstrap.min.css">
       <PackagePath>wwwroot\css\bootstrap\bootstrap.min.css</PackagePath>
@@ -305,10 +305,6 @@
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
       <Modified>2024-02-29T13:31:27.368</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ERP.Frontend.App.deps.json">
-      <PackagePath>ERP.Frontend.App.deps.json</PackagePath>
-      <Modified>2024-02-29T13:34:07.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -618,6 +614,10 @@
       <PackagePath>ERP.Backend.Models.dll</PackagePath>
       <Modified>2024-03-14T15:08:02.912</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ERP.Frontend.App.deps.json">
+      <PackagePath>ERP.Frontend.App.deps.json</PackagePath>
+      <Modified>2024-03-15T07:48:31.050</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\.nuget\packages\microsoft.maui.controls.compatibility\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
       <Modified>2024-01-15T19:00:14.000</Modified>
@@ -632,15 +632,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\ERP.Frontend.App.styles.css">
       <PackagePath>wwwroot\ERP.Frontend.App.styles.css</PackagePath>
-      <Modified>2024-02-29T13:31:21.645</Modified>
+      <Modified>2024-03-15T08:51:33.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\ERP.Frontend.App.bundle.scp.css">
       <PackagePath>wwwroot\ERP.Frontend.App.bundle.scp.css</PackagePath>
-      <Modified>2024-02-29T13:31:21.647</Modified>
+      <Modified>2024-03-15T08:51:33.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>
-      <Modified>2024-02-29T13:06:46.748</Modified>
+      <Modified>2024-03-15T08:51:32.756</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\Components\Layout\NavMenu.razor.css">
       <PackagePath>Components\Layout\NavMenu.razor.css</PackagePath>

@@ -229,9 +229,6 @@
     <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ERP.Frontend.App.deps.json">
-      <PackagePath>ERP.Frontend.App.deps.json</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
     </AppxPackagedFile>
@@ -462,6 +459,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\source\repos\ERP.Backend.Prototype\ERP.Backend.Interface\bin\Debug\net8.0\ERP.Backend.Models.dll">
       <PackagePath>ERP.Backend.Models.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Armand Njomo\Downloads\ERP.Frontend.App\ERP.Frontend.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ERP.Frontend.App.deps.json">
+      <PackagePath>ERP.Frontend.App.deps.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Armand Njomo\.nuget\packages\microsoft.maui.controls.compatibility\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

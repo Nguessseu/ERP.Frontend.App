@@ -7,13 +7,13 @@
 @inject IJSRuntime JS
 @using System.Text.Json
 
-
 <h1>List of Articles</h1>
 
 <div class="parent">
     <button class="btn btn-primary_create " @onclick="CreateArticle">Create Article</button>
     <button class="btn btn-danger" @onclick="DeleteSelectedArticles">Delete Selected</button>
     <button class="btn btn-primary" @onclick="ShowArticle">Show Article</button>
+    <button class="btn btn-primary_update " @onclick="CreateArticle">Update Article</button>
 </div>
 
 
@@ -30,7 +30,6 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!-- Form for creating new article -->
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" class="form-control" @bind="newArticle.Name" />
@@ -39,8 +38,6 @@
                             <label for="brand">Brand:</label>
                             <input type="text" class="form-control" @bind="newArticle.Brand" />
                         </div>
-
-                        <!-- Add more fields for additional article properties as needed -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-save" @onclick="SaveArticle">Save</button>
@@ -50,7 +47,6 @@
             </div>
         </div>
     </div>
-   
 }
 
 <table class="table">
@@ -61,14 +57,11 @@
             <th>Name</th>
             <th>Brand</th>
             <th>Prices</th>
-            <!-- Add more table headers as needed -->
         </tr>
     </thead>
-    <tbody>
+    <tbody> 
         @foreach (var article in articles)
         {
-            
-                
             <tr>
                 <td>
                     <input type="checkbox" @onclick="() => ToggleSelection(article.Id)" />
@@ -86,9 +79,7 @@
                         </li>
                     </ul>
                 }
-                <!-- Add more table cells for additional article properties -->
             </tr>
-               
         }
     </tbody>
 </table>
@@ -97,22 +88,10 @@
     private bool showCreateArticleModal = false;
     private List<Article> articles = new List<Article>();
     private List<Price> prices = new List<Price>();
-
     private Article newArticle = new Article();
+    private Article updateArticle = new Article();
     private Article currentArticle = new Article();
-
     private Price newPrice = new Price();
-
-    private async Task CreateArticle()
-    {
-        showCreateArticleModal = true;
-    }
-
-    private void CloseCreateArticleModal()
-    {
-        showCreateArticleModal = false;
-    }
-
 
     protected override async Task OnInitializedAsync()
     {
@@ -129,6 +108,17 @@
         }
     }
 
+    private async Task CreateArticle()
+    {
+        showCreateArticleModal = true;
+    }
+
+    private void CloseCreateArticleModal()
+    {
+        showCreateArticleModal = false;
+    }
+
+
     private async Task SaveArticle()
     {
         using (var channel = GrpcChannel.ForAddress(("http://localhost:5198")))
@@ -141,7 +131,6 @@
         }
     }
 
-    // Delete Article
     private List<int> selectedArticles = new List<int>();
 
     private async Task DeleteSelectedArticles()
@@ -197,5 +186,4 @@
             currentArticle = reply;
         }
     }
-
 }

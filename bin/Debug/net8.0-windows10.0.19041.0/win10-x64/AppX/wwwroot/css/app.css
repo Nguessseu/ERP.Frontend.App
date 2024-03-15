@@ -180,6 +180,12 @@ h1:focus {
     border-color: #1861ac;
 }
 
+.btn-primary_update {
+    color: #fff;
+    background-color: orange
+    border-color: #1861ac;
+}
+
 .button_green {
     background-color: lightgreen;
     color: black;

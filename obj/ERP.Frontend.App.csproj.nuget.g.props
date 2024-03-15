@@ -23,6 +23,7 @@
     <Import Project="$(NuGetPackageRoot)grpc.tools\2.61.0\build\Grpc.Tools.props" Condition="Exists('$(NuGetPackageRoot)grpc.tools\2.61.0\build\Grpc.Tools.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-windows10.0.19041.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSonarAnalyzer_CSharp Condition=" '$(PkgSonarAnalyzer_CSharp)' == '' ">C:\Users\Armand Njomo\.nuget\packages\sonaranalyzer.csharp\9.21.0.86780</PkgSonarAnalyzer_CSharp>
     <PkgMicrosoft_WindowsAppSDK Condition=" '$(PkgMicrosoft_WindowsAppSDK)' == '' ">C:\Users\Armand Njomo\.nuget\packages\microsoft.windowsappsdk\1.3.230724000</PkgMicrosoft_WindowsAppSDK>
     <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">C:\Users\Armand Njomo\.nuget\packages\grpc.tools\2.61.0</PkgGrpc_Tools>
   </PropertyGroup>
